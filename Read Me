@@ -1,0 +1,32 @@
+Sebagai seorang DevOps di perusahaan startup, perusahaan tersebut akan memigrasikan layanan yang mereka miliki 
+menjadi container base dengan mengintegrasikan ke layanan AWS. 
+
+Tadinya mereka memiliki 2 server yaitu test dan production dengan tiga aplikasi yaitu sosial media pesbuk, website company, dan blog
+documentasion berbasis wordpress. 
+
+Rencana mereka dua aplikasi yaitu pesbuk dan web company akan mereka simpan di cluster container ECS dan untuk blog documentasion
+mereka akan disimpan di kubernetes.
+
+Bagaimanakah menyusun infrastruktur tersebut agar bisa berjalan sesuai dengan rencana yang diberikan ?
+
+Goal: Dapat merancang sebuah infrastruktur berbasis containerisasi yang mudah dan efisien, dimana sistem sudah saling terintegrasi
+dengan layanan AWS sehingga bisa melakukan scalling dengan mudah.
+
+3.1.3. Requirement:
+
+Small Project ini memuat semua materi yang sudah saya pelajari selama beberapa pekan terakhir, berikut beberapa requirement yang 
+harus dikerjakan.
+
+1. Buat topologi yang cocok dan efisien untuk infrastruktur yang akan dibuat, sesuai dengan history yang sudah diceritakan.
+2. Buat dua buah cluster dari EC2, dimana cluster tersebut adalah Server testing dan server production.
+3. Buat sebuah image dari aplikasi pesbuk yang terintegrasi dengan RDS dan juga image landing page.
+4. Deploy kedua image tersebut pada cluster testing dan juga production, selolah olah
+aplikasi tersebut kita test di server tersting dan setelah stable kita push di server production.
+5. Buat satu buah cluster menggunakan kubernetes.
+6. Deploy aplikasi wordpress pada cluster kubernetes untuk blog perusahaan.
+7. Arahkan aplikasi pesbuk, landing page dan blog wordpress pada domain route53,
+sehingga keduanya bisa dipanggil dengan nama 
+
+pesbuk.sdclisy-alpha.web.id,
+giri.sdclisy-alpha.web.id, dan 
+blog.sdclisy-alpha.web.id.
